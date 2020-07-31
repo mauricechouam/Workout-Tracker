@@ -12,7 +12,7 @@ const db = require("./models");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
-app.use(logger("dev"));
+
 
 // Database connection
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/workout";
@@ -25,6 +25,13 @@ mongoose.connect(MONGODB_URI, {
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, "public/index.html"));
 });
+
+
+//This route path will match requests to the root route,/exercise.
+app.get('/exercise', (req, res) => {
+    res.sendFile(path.normalize(__dirname + "/public/exercise.html"));
+});
+
 
 //This route path will match requests to the root route, /stats.
 app.get('/stats', (req, res) => {
