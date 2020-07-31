@@ -38,3 +38,34 @@ app.get('/api/workouts', (req, res) => {
         res.json(data);
     });
 });
+
+app.get('/api/workouts/range', (req, res) => {
+    db.Workout.find({}).then(data => {
+        res.json(data);
+    }).catch(err => {
+        res.status(404).json(err.message);
+    });
+});
+
+//This route path will match requests to /api/workout/Id find by ID enter by user
+app.put('/api/workouts/:id', (req, res) => {
+    db.Workout.findByIdAndUpdate(req.params.id,
+        { $push: { exercises: req.body } }, (err, data) => {
+            if (err) console.log(err);
+            else res.json(data);
+        })
+});
+
+//Respond to POST request by creating a new workout Data in D\B
+
+app.post('/api/workouts', (req, res) => [
+    db.Workout.create(req.body, (err, data) => {
+        if (err) console.log(err);
+        else res.json(data);
+    })
+]);
+
+app.listen(PORT, (err) => {
+    if (err) console.log(err);
+    else console.log('Listening on http://localhost:' + PORT);
+});
