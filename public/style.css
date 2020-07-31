@@ -32,6 +32,14 @@ a:visited {
   text-decoration: none;
   color: inherit;
 }
+nav a{
+  padding:10px
+}
+nav a:hover{
+background-color: rgb(187, 137, 0);
+
+}
+
 
 header {
   height: 150px;
