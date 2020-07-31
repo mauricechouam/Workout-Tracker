@@ -4,8 +4,8 @@ const Schema = mongoose.Schema;
 
 const workoutdb = new Schema({
   day: {
-    type: String,
-    default: Date.now
+    type: Date,
+    default:() => new Date()
   },
   numExercises: { type: Number },
   exercises: [
@@ -43,13 +43,14 @@ const workoutdb = new Schema({
   toObject: {virtuals:true} 
 });
 
-//adds a dynamically-created proprety to schema
+// adds a dynamically-created property to schema
 workoutdb.virtual("totalDuration").get(function () {
-  //"reduce"array of exercises down to just the sum of their duration 
+  // "reduce" array of exercises down to just the sum of their durations
   return this.exercises.reduce((total, exercise) => {
     return total + exercise.duration;
   }, 0);
 });
+
 const Workout = mongoose.model("Workout", workoutdb);
 
 module.exports = Workout;

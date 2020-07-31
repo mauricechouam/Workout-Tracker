@@ -17,25 +17,12 @@ app.use(express.static("public"));
 app.use(morgan("dev"));
 
 
-// Database connection
+// Database Mongo connection
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/workout";
 mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true,
     useFindAndModify: false
 })
-
-
-//This route path will match requests to /api/workouts.
-
-
-//Respond to POST request by creating a new workout Data in D\B
-
-app.post('/api/workouts', (req, res) => [
-    db.Workout.create(req.body, (err, data) => {
-        if (err) console.log(err);
-        else res.json(data);
-    })
-]);
 
 // Creating Routes
 require("./routes/apiRoutes")(app);
