@@ -1,35 +1,27 @@
-const router = require("express").Router();
-const Transaction = require("../models/transaction.js");
+const Workout = require("../models/workout.js")
 
-router.post("/api/transaction", ({ body }, res) => {
-  Transaction.create(body)
-    .then(dbTransaction => {
-      res.json(dbTransaction);
-    })
-    .catch(err => {
-      res.status(400).json(err);
+module.exports = function (app) {
+  app.get('/api/workouts', (req, res) => {
+    Workout.find({}).then(data => {
+        console.log(data);
+        res.json(data);
     });
 });
 
-router.post("/api/transaction/bulk", ({ body }, res) => {
-  Transaction.insertMany(body)
-    .then(dbTransaction => {
-      res.json(dbTransaction);
-    })
-    .catch(err => {
-      res.status(400).json(err);
+app.get('/api/workouts/range', (req, res) => {
+    Workout.find({}).then(data => {
+        res.json(data);
+    }).catch(err => {
+        res.status(404).json(err.message);
     });
 });
 
-router.get("/api/transaction", (req, res) => {
-  Transaction.find({})
-    .sort({ date: -1 })
-    .then(dbTransaction => {
-      res.json(dbTransaction);
-    })
-    .catch(err => {
-      res.status(400).json(err);
-    });
+//This route path will match requests to /api/workout/Id find by ID enter by user
+app.put('/api/workouts/:id', (req, res) => {
+    Workout.findByIdAndUpdate(req.params.id,
+        { $push: { exercises: req.body } }, (err, data) => {
+            if (err) console.log(err);
+            else res.json(data);
+        })
 });
-
-module.exports = router;
+}
