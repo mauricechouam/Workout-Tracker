@@ -9,7 +9,8 @@ module.exports = function (app) {
 });
 
 app.get('/api/workouts/range', (req, res) => {
-    Workout.find({}).then(data => {
+  Workout.find.sort({ $natural: -1 }).limit(1)
+    .then(data => {
         res.json(data);
     }).catch(err => {
         res.status(404).json(err.message);
