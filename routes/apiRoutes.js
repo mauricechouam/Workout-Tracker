@@ -9,7 +9,7 @@ module.exports = function (app) {
 });
 
 app.get('/api/workouts/range', (req, res) => {
-  Workout.find.sort({ $natural: -1 }).limit(1)
+  Workout.find({})
     .then(data => {
         res.json(data);
     }).catch(err => {
