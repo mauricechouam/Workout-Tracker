@@ -1,85 +1,71 @@
-# Workout-Tracker
-Web Application Allowing  user to his to view create and track daily workouts,  to be able to log multiple exercises in a workout on a given day
-User shoul be able  to track the name, type, weight, sets, reps, and duration of exercise
+#  Burger
+<p>Web Application Allowing user to view create and track his daily workouts .User should be able to track the name, type, weight, sets, reps, and duration of exercise.</p>
+
+[![GitHub license](https://img.shields.io/badge/licence-BSD3.0-green)](https://github.com/mauricechouam/Workout-Tracker)
+![GitHub top language](https://img.shields.io/github/languages/top/mauricechouam/Workout-Tracker)
+
+## Table of contents ##
+  * [User Story](#User-Story)
+  * [Screenshots](#screenshots)
+  * [Technologies used to create app](#technologies-used)
+  * [Acceptance Criteria](#Acceptance-Criteria)
+  * [Useful resources](#Useful-resources)
+  * [Author](#Author)
+
+  ## User Story
+ * As a user, I want to be able to view create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.
+
+## Screenshots
+
+### Tracker Page
+<img src="">
+<br>
+<br>
+
+### New Exercise page
+<img src="">
+
+### Dashboard page
+<img src="">
+
+## Technologie Used
+
+1. Frontend technologies
+* HTML
+* CSS
+* Bootstrap 
+* Javascript
+* jQuery 
+
+2. Backend technologies
+* Node.js 
+* MongoDB ( mLab)
+* Express 
+* Heroku (Deployment )
 
 
-As a user, I want to be able to view create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.
+## Acceptance Criteria
 
+When the user loads the page, they should be given the option to create a new workout, or continue with their last workout.
 
-## Table of Contents ##
-- [Team_Members](#Team_Members)
-- [User_Story](#User_Story)
-- [APIs](#APIs)
-- [Wireframe](#Wireframe)
-- [Tasks](#Tasks)
-- [Roles](#Roles)
-- [Successes](#Successes)
-- [Challenges](#Challenges)
-- [Future-Development](#Future-Development)
-- [Sources](#Resources)
+The user should be able to:
 
-## Team Members ##
+  * Add exercises to a previous workout plan.
 
-* Chase Johnson (https://github.com/chaseyb) 
+  * Add new exercises to a new workout plan.
 
-* David Metcalf (https://github.com/gloriousLoaf) 
+  * View multiple the combined weight of multiple exercises on the `stats` page.
 
-* Maurice Chouamou (https://github.com/mauricechouam)
+## Useful resources
+* [NoSQL](https://en.wikipedia.org/wiki/NoSQL)
+* [MongoDB Website](https://www.mongodb.com/)
+* [Robo 3T Website](https://robomongo.org/download)
+* [MongoJS Documentation](https://www.npmjs.com/package/mongojs)
+* [Mongoose Documentation](http://mongoosejs.com/docs/guide.html)
+* [MongoDB for your Heroku NodeJS app](https://www.youtube.com/watch?v=GDqtv1eGGpA)
 
-## User Story ##
-
-AS A concerned citizen of the world, looking out for myself and my loved ones.
-I WANT to get up to date information on the spread of COVID-19 in my area.
-SO THAT I can make safe plans for shopping, working and living in my community.
-
-## APIs
-
-- IP Geolocation: https://ipapi.co/ Used to get the city location of the user.
-- COVID-19 Statistics: https://rapidapi.com/axisbits-axisbits-default/api/covid-19-statistics/ & https://covid-19-apis.postman.com/ Used to get local coronavirus related statistics.
-- Novel COVID API : Multi-source aggregated Covid-19 stats.
-- NewsAPI.org : Search worldwide news with code.
-
-## Wireframe ##
-
-Local search button pulls up info to populate map. Also fills info into Recent Cases, Hot Spots (maybe other categories) which animate down to reveal info when tapped/clicked. Local resources offers info on where to find help, food, distractions etc.
-
-## Tasks ##
-
-* Design HTML with classes and id's to use in CSS & JS.
-* Design CSS utilizing Bootstrap & flex classes to make our app mobile-first, visually appealing and ready to work with JS / jQuery.
-* JS / jQuery to add interactivity and functionality.
-* APIs to tackle; working out proper AJAX calls to add further features to our scripts.
-
-## Roles ##
-
-* Chase - Map & Global Stats API, Frontend & CSS styling.
-* David - News, Testing & additional Stats API, plus some CSS.
-* Maurice - Map API, Frontend & CSS styling. 
-
-## Successes ##
-
-* Fully functional application.
-* Utilizes miltiple APIs to work together in unison.
-* Tracks latest updates for COV-19 Global and Local Statistics. 
-* Provides National Headlines with working links.
-* Provides local testing info based on user location.
-* Provides additional resources for those who need help.
-
-## Challenges ##
-
-* Getting Map API to display cluters on Map with country data. 
-* Coordinating the various API calls to populate on load without errors.
-* Extracting numerous data points from AJAX to display in the correct elements in HTML.
-
-## Future-Development ##
-
-* Update Map API to display more information.
-* Add diagrams to sync with statistics.
-* Developement desktop application.
-
-## Sources ##
-
-- Moment.JS :  Parse, validate, manipulate, and display dates and times
-- Popper.js :  Popover positioning engine, in conjunction with Bootstrap.js
-- JQueryUI.js : Interactions and animations, in conjunction with jQuery.js
-- The Nerdy Dev : You Tuber Whose Video helped us create our MapBox panel
+## Author
+* Application Built from Scratch by 
+   [mauricechouam](https://github.com/mauricechouam)
+  <img src="https://github.com/mauricechouam.png" alt="GitHub Profile Pic" width="150" height="150">
+  
