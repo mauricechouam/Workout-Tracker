@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const Workoutdb = new Schema({
+const WorkoutDB = new Schema({
     day: { type: Date, default: Date.now },
     numExercises: { type: Number },
     exercises: [
@@ -39,16 +39,15 @@ const Workoutdb = new Schema({
     toObject: { virtuals: true }
 });
 
-mongodb://<dbuser>:<dbpassword>@ds117485.mlab.com:17485/heroku_hq9vwhs5
 
 // adds a dynamically-created property to schema
-Workoutdb.virtual("totalDuration").get(function () {
+WorkoutDB.virtual("totalDuration").get(function () {
     // "reduce" array of exercises down to just the sum of their durations
     return this.exercises.reduce((total, exercise) => {
         return total + exercise.duration;
     }, 0);
 });
 
-const Workout = mongoose.model('Workout', Workoutdb);
+const Workout = mongoose.model('Workout', WorkoutDB);
 
 module.exports = Workout;
