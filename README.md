@@ -1,4 +1,4 @@
-#  Burger
+#  Workout-Tracker
 <p>Web Application Allowing user to view create and track his daily workouts .User should be able to track the name, type, weight, sets, reps, and duration of exercise.</p>
 
 [![GitHub license](https://img.shields.io/badge/licence-BSD3.0-green)](https://github.com/mauricechouam/Workout-Tracker)
@@ -6,27 +6,14 @@
 
 ## Table of contents ##
   * [User Story](#User-Story)
-  * [Screenshots](#screenshots)
   * [Technologies used to create app](#technologies-used)
   * [Acceptance Criteria](#Acceptance-Criteria)
   * [Useful resources](#Useful-resources)
+  * [Screenshots](#screenshots)
   * [Author](#Author)
 
   ## User Story
  * As a user, I want to be able to view create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.
-
-## Screenshots
-
-### Tracker Page
-<img src="https://github.com/mauricechouam/Workout-Tracker/blob/master/public/img/tracker.jpg">
-<br>
-<br>
-
-### New Exercise page
-<img src="https://github.com/mauricechouam/Workout-Tracker/blob/master/public/img/new.jpg?raw=true">
-
-### Dashboard page
-<img src="https://github.com/mauricechouam/Workout-Tracker/blob/master/public/img/dash.jpg?raw=true">
 
 ## Technologie Used
 
@@ -63,6 +50,19 @@ The user should be able to:
 * [MongoJS Documentation](https://www.npmjs.com/package/mongojs)
 * [Mongoose Documentation](http://mongoosejs.com/docs/guide.html)
 * [MongoDB for your Heroku NodeJS app](https://www.youtube.com/watch?v=GDqtv1eGGpA)
+
+## Screenshots
+
+### Tracker Page
+<img src="https://github.com/mauricechouam/Workout-Tracker/blob/master/public/img/tracker.jpg">
+<br>
+<br>
+
+### New Exercise page
+<img src="https://github.com/mauricechouam/Workout-Tracker/blob/master/public/img/new.jpg?raw=true">
+
+### Dashboard page
+<img src="https://github.com/mauricechouam/Workout-Tracker/blob/master/public/img/dash.jpg?raw=true">
 
 ## Author
 * Application Built from Scratch by 
