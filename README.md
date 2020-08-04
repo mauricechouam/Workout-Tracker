@@ -1,4 +1,4 @@
-#  Burger
+#  Workout-Tracker
 <p>Web Application Allowing user to view create and track his daily workouts .User should be able to track the name, type, weight, sets, reps, and duration of exercise.</p>
 
 [![GitHub license](https://img.shields.io/badge/licence-BSD3.0-green)](https://github.com/mauricechouam/Workout-Tracker)
