@@ -18,15 +18,15 @@
 ## Screenshots
 
 ### Tracker Page
-<img src="">
+<img src="https://github.com/mauricechouam/Workout-Tracker/blob/master/public/img/tracker.jpg">
 <br>
 <br>
 
 ### New Exercise page
-<img src="">
+<img src="https://github.com/mauricechouam/Workout-Tracker/blob/master/public/img/new.jpg?raw=true">
 
 ### Dashboard page
-<img src="">
+<img src="https://github.com/mauricechouam/Workout-Tracker/blob/master/public/img/dash.jpg?raw=true">
 
 ## Technologie Used
 
