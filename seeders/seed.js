@@ -1,7 +1,7 @@
 let mongoose = require("mongoose");
 let db = require("../models");
 
-mongoose.connect("mongodb://localhost/workout", {
+mongoose.connect("mongodb://maurice:pass123@ds117485.mlab.com:17485/heroku_hq9vwhs5", {
   useNewUrlParser: true,
   useFindAndModify: false
 });

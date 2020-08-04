@@ -19,7 +19,7 @@ app.use(morgan("dev"));
 
 
 // Database Mongo connection
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/workout";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://maurice:pass123@ds117485.mlab.com:17485/heroku_hq9vwhs5";
 mongoose.connect(MONGODB_URI,{  
     useNewUrlParser:true,
     useFindAndModify:false

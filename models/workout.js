@@ -39,6 +39,7 @@ const Workoutdb = new Schema({
     toObject: { virtuals: true }
 });
 
+mongodb://<dbuser>:<dbpassword>@ds117485.mlab.com:17485/heroku_hq9vwhs5
 
 // adds a dynamically-created property to schema
 Workoutdb.virtual("totalDuration").get(function () {
